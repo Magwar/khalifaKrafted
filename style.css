@@ -1,38 +1,38 @@
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body {
+body{
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
-header {
+header{
   background-color: #333;
   color: #fff;
   padding: 1rem;
 }
-header h1 {
+header h1{
   margin: 0;
 }
-nav ul {
+nav ul{
   list-style-type: none;
 }
 
-nav ul li {
+nav ul li{
   display: inline;
   margin-right: 1rem;
 }
-nav ul li a {
+nav ul li a{
   color: #fff;
   text-decoration: none;
 }
-main {
+main{
   padding: 2rem;
 }
 .hero{
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   background-color: #f4f4f4;
 }
 .hero h2{
@@ -53,25 +53,35 @@ main {
   /* border:  solid 2px #23dd12;
   transition: ease-in-out; */
 }
-.featured-products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center products horizontally */
-    max-width: 1200px; /* Set maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
+.featured-products{
+  text-align: center;
 }
-.product {
-    width: calc(33.33% - 2rem); /* Adjust width here */
-    margin: 1rem; /* Add spacing between products */
-    text-align: center;
-    border-radius: 10px; /* Add border radius to product containers */
-    overflow: hidden; /* Hide overflow content (e.g., if the product name is too long) */
+.products-container{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  justify-content: center;
+  max-width: 1300px;
+  margin: 0 auto;
 }
-.product img {
-    width: 100%; /* Ensure images fill the product container */
-    border-radius: 10px; /* Ensure the image inside the container has rounded corners */
+.product{
+  width: 300px;
+  height: 300px;
+  margin: 0 1rem;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-
+.product:hover{
+  transform: translateY(-5px);
+}
+.product img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
 
 
 
@@ -84,7 +94,7 @@ main {
 .product p.price{
     font-weight: bold;
 }
-.product .btn{
+.product .buy-btn{
     display: inline-block;
     background-color: #333;
     color: #fff;
@@ -92,9 +102,10 @@ main {
     text-decoration: none;
     border: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
     cursor: pointer;
 }
-.product .btn:hover{
+.product .buy-btn:hover{
     background-color: #555;
 }
 
